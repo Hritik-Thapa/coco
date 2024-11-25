@@ -17,7 +17,7 @@ const Charts = () => {
         { name: 'Jul', sales: 349, expenses: 430 },
     ];
     return (
-        <div>
+        <div >
             <LineChart width={600} height={300} data={data}>
                 {/* X and Y Axes */}
                 <XAxis dataKey="name" />
