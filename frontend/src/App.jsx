@@ -6,7 +6,7 @@ import FetchButton from "./components/FetchButton";
 const App = () => {
   const [selected, setSelected] = useState("");
   const [modal, setModal] = useState(false);
-  const [data, setData] = useState({});
+  const [data, setData] = useState({ name: "", file: null });
   const [fetchShow, setFetchShow] = useState(null);
   const [formError, setFormError] = useState(false);
   useEffect(() => {
@@ -23,7 +23,7 @@ const App = () => {
         setFetchShow(true);
       }
     } catch (error) {
-      throw error;
+      console.log(error);
     }
   };
 
@@ -45,9 +45,11 @@ const App = () => {
 
   return (
     <div className="flex flex-col items-center justify-center m-5 gap-4">
+
       <p className="text-white bg-green-500 font-bold text-center text-4xl p-4 rounded-lg hover:text-green-500 hover:bg-white cursor-pointer w-[60%] ">
         Hello World
       </p>
+
       <Charts />
 
       <Dropdown>
@@ -106,9 +108,10 @@ const App = () => {
           type="file"
           id="file"
           accept="application/pdf"
-          onChange={(e) => setData({ ...data, [e.target.id]: e.target.files[0] })}
+          onChange={(e) => setData({ ...data, [e.target.id]: Array.from(e.target.files) })}
+          multiple
         />
-        <button type="button" onClick={handleSubmit} >submit </button>
+        <button type="button" onClick={handleSubmit} >Submit </button>
       </form>
 
       {/* form error handeling */}
