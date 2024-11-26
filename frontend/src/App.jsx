@@ -2,11 +2,29 @@ import React, { useEffect, useState } from "react";
 import "./App.css";
 import Charts from "./components/charts";
 import { Button, Dropdown, Modal } from "react-bootstrap";
-import Button from "./components/Button";
+import FetchButton from "./components/FetchButton";
 const App = () => {
   const [selected, setSelected] = useState("");
   const [modal, setModal] = useState(false);
-  const [data, setData] = useState({ name: '', file: '' });
+  const [data, setData] = useState({});
+  const [fetchShow, setFetchShow] = useState(null);
+  useEffect(() => {
+    fetchData();
+  }, []);
+
+  const fetchData = async () => {
+    try {
+      const response = await fetch("/test");
+      const data = await response.json();
+      if (!data.ok) {
+        setFetchShow(false);
+      } else {
+        setFetchShow(true);
+      }
+    } catch (error) {
+      throw error;
+    }
+  };
 
   return (
     <div className="flex flex-col items-center justify-center m-5 gap-4">
@@ -34,20 +52,24 @@ const App = () => {
 
       {/* button for popup */}
 
-      <Button variant='primary' className='p-4' onClick={() => setModal(true)}>Click Me</Button>
+      <Button variant="primary" className="p-4" onClick={() => setModal(true)}>
+        Click Me
+      </Button>
 
       {modal && (
         <Modal show={true} onHide={() => setModal(false)}>
-          <Modal.Header closeButton className='bg-slate-100'>
-            <Modal.Title >Modal title</Modal.Title>
+          <Modal.Header closeButton className="bg-slate-100">
+            <Modal.Title>Modal title</Modal.Title>
           </Modal.Header>
 
-          <Modal.Body className='w-[80%] m-3'>
+          <Modal.Body className="w-[80%] m-3">
             <p>Modal body text goes here.</p>
           </Modal.Body>
 
-          <Modal.Footer className='bg-slate-100' >
-            <Button variant="secondary" onClick={() => setModal(false)}>Close</Button>
+          <Modal.Footer className="bg-slate-100">
+            <Button variant="secondary" onClick={() => setModal(false)}>
+              Close
+            </Button>
             <Button variant="primary">Save changes</Button>
           </Modal.Footer>
         </Modal>
