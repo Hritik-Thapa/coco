@@ -12,7 +12,8 @@ export const Home = () => {
 
   return (
     <div className="w-full h-screen bg-sky-50 flex items-center justify-center">
-      <div className="text-center flex flex-col md:flex-row items-center justify-center gap-24 max-w-5xl px-4">
+
+      <div className="text-center flex flex-col md:flex-row items-center justify-center gap-24  border rounded-xl p-40 shadow ">
         <div className="text-left">
           <h1 className="text-7xl font-bold 0 mb-4">COCO</h1>
           <h2 className="text-3xl font-semibold mb-2">
@@ -24,7 +25,7 @@ export const Home = () => {
           </p>
           <Button
             variant="primary"
-            className="px-4 py-2 rounded-2xl hover:text-blue-900 hover:bg-white cursor-pointer"
+            className="px-8 py-3 rounded-full hover:text-blue-900 hover:bg-white hover:drop-shadow-lg shadow cursor-pointer text-xl"
             onClick={handleGetStarted} // Trigger navigate when clicked
           >
             Get Started
