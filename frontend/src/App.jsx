@@ -6,7 +6,7 @@ import Button from "./components/Button";
 const App = () => {
   const [selected, setSelected] = useState("");
   const [modal, setModal] = useState(false);
-  const [data, setData] = useState({});
+  const [data, setData] = useState({ name: '', file: '' });
 
   return (
     <div className="flex flex-col items-center justify-center m-5 gap-4">
@@ -53,6 +53,17 @@ const App = () => {
         </Modal>
       )}
 
+      {/* FORM */}
+
+      <form>
+        <input type="text" placeholder="name" value={data.name} onChange={(e) => setData({ ...data, [e.target.name]: e.target.value })} />
+        <input
+          type="file"
+          accept="application/pdf"
+          onChange={(e) => setData({ ...data, [e.target.name]: e.target.files(0) })}
+        />
+
+      </form>
 
     </div>
   );
