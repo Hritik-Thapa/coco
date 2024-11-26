@@ -3,6 +3,7 @@ import "./App.css";
 import Charts from "./components/charts";
 import { Button, Dropdown, Modal } from "react-bootstrap";
 import FetchButton from "./components/FetchButton";
+import OffCanvas from "./components/OffCanvas";
 const App = () => {
   const [selected, setSelected] = useState("");
   const [modal, setModal] = useState(false);
@@ -28,6 +29,7 @@ const App = () => {
 
   return (
     <div className="flex flex-col items-center justify-center m-5 gap-4">
+      <OffCanvas />
       <p className="text-white bg-green-500 font-bold text-center text-4xl p-4 rounded-lg hover:text-green-500 hover:bg-white cursor-pointer w-[60%] ">
         Hello World
       </p>
