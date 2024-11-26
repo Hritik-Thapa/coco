@@ -1,13 +1,14 @@
 import React, { useEffect, useState } from "react";
 import "./App.css";
 import Charts from "./components/charts";
-import { Button, Dropdown, Modal } from "react-bootstrap";
+import { Button, Dropdown, Modal, Alert } from "react-bootstrap";
 import FetchButton from "./components/FetchButton";
 const App = () => {
   const [selected, setSelected] = useState("");
   const [modal, setModal] = useState(false);
   const [data, setData] = useState({});
   const [fetchShow, setFetchShow] = useState(null);
+  const [formError, setFormError] = useState(false);
   useEffect(() => {
     fetchData();
   }, []);
@@ -25,6 +26,22 @@ const App = () => {
       throw error;
     }
   };
+
+  const handleSubmit = async () => {
+
+    //Check if the any form field is empty or not
+    console.log(data)
+    if (data.name && data.file) {
+      console.log('ok');
+    }
+    else {
+      setFormError(true);
+      setTimeout(() => {
+        setFormError(false);
+      }, 3000)
+    }
+
+  }
 
   return (
     <div className="flex flex-col items-center justify-center m-5 gap-4">
@@ -56,6 +73,8 @@ const App = () => {
         Click Me
       </Button>
 
+
+
       {modal && (
         <Modal show={true} onHide={() => setModal(false)}>
           <Modal.Header closeButton className="bg-slate-100">
@@ -74,18 +93,27 @@ const App = () => {
           </Modal.Footer>
         </Modal>
       )}
+      {fetchShow ?
+        <h1 className="text-lg text-green-500">Success</h1> :
+        <h1 className="text-lg text-red-500">Fail</h1>
+      }
 
       {/* FORM */}
 
       <form>
-        <input type="text" placeholder="name" value={data.name} onChange={(e) => setData({ ...data, [e.target.name]: e.target.value })} />
+        <input type="text" placeholder="name" id="name" value={data.name} onChange={(e) => setData({ ...data, [e.target.id]: e.target.value })} />
         <input
           type="file"
+          id="file"
           accept="application/pdf"
-          onChange={(e) => setData({ ...data, [e.target.name]: e.target.files(0) })}
+          onChange={(e) => setData({ ...data, [e.target.id]: e.target.files[0] })}
         />
-
+        <button type="button" onClick={handleSubmit} >submit </button>
       </form>
+
+      {/* form error handeling */}
+
+      {formError && (<Alert variant="danger">Please Add fill the form</Alert>)}
 
     </div>
   );
