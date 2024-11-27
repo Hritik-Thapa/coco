@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { Button } from "react-bootstrap";
 import { FaUser } from "react-icons/fa"; // Font Awesome icon for the user icon
+import { useNavigate } from "react-router-dom";
 
 const Sidebar = () => {
+  const navigate = useNavigate();
 
   const [display, setDisplay] = useState(true);
   // console.log(pathname.location);
@@ -22,34 +24,54 @@ const Sidebar = () => {
   else
     return (
       <div className="  w-[20%]  h-screen flex bg-blue-50 z-10">
-        <div className="w-[100%] h-full bg-blue-50 flex flex-col items-center py-6">
-          <div className="h-[15vh] flex items-center">
+        <div className="w-[100%] h-full bg-blue-50 flex flex-col items-center py-6  text-start">
+          <div className="h-[15vh] flex items-center  text-start">
             <h1 className="text-3xl font-bold text-blue-900 mb-6">COCO</h1>
             <hr className="w-[50%] h-1 border-blue-900 mx-4 "></hr>
           </div>
-          <ul className="mt-8 w-3/4 flex flex-col gap-4">
-            <li>
-              <Button className="w-full text-blue-50 b  -blue-900 hover:text-blue-900 hover:bg-blue-50 py-2 px-4 rounded-md transition">
+          <ul className="mt-8 w-3/4 flex flex-col gap-4  text-start">
+            <li className=" text-start">
+              <Button
+                className="w-full text-blue-50 bg-blue-900 hover:text-blue-900 hover:bg-blue-50 py-2 px-4 rounded-md transition  text-start"
+                onClick={() => {
+                  navigate("/subjects");
+                }}
+              >
                 Subjects
               </Button>
             </li>
             <li>
-              <Button className="w-full text-blue-900 bg-white hover:text-blue-900 hover:bg-blue-50 py-2 px-4 rounded-md transition">
+              <Button
+                className="w-full text-blue-900 bg-white hover:text-blue-900 hover:bg-blue-50 py-2 px-4 rounded-md transition  text-start"
+                onClick={() => {
+                  navigate("/dashboard");
+                }}
+              >
                 Dashboard
               </Button>
             </li>
             <li>
-              <Button className="w-full text-blue-900 bg-white hover:text-blue-900 hover:bg-blue-50 py-2 px-4 rounded-md transition">
+              <Button
+                className="w-full text-blue-900 bg-white hover:text-blue-900 hover:bg-blue-50 py-2 px-4 rounded-md transition  text-start"
+                onClick={() => {
+                  navigate("/notes");
+                }}
+              >
                 Notes
               </Button>
             </li>
             <li>
-              <Button className="w-full text-blue-900 bg-white hover:text-blue-900 hover:bg-blue-50 py-2 px-4 rounded-md transition">
+              <Button
+                className="w-full text-blue-900 bg-white hover:text-blue-900 hover:bg-blue-50 py-2 px-4 rounded-md transition  text-start"
+                onClick={() => {
+                  navigate("/flashcards");
+                }}
+              >
                 FlashCards
               </Button>
             </li>
           </ul>
-          <Button className="mt-auto w-3/4 text-blue-900 bg-white hover:text-blue-900 hover:bg-blue-50 rounded-md py-2 px-4 transition">
+          <Button className="mt-auto w-3/4 text-blue-900 bg-white hover:text-blue-900 hover:bg-blue-50 rounded-md py-2 px-4 transition  text-start">
             Generate
           </Button>
         </div>
