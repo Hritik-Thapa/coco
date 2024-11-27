@@ -24,13 +24,12 @@ export const Home = () => {
             Turn Your Notes into Knowledge <br />
             Smarter, Faster, Better.
           </p>
-          <Button
-            variant="primary"
-            className="px-8 py-3 rounded-full hover:text-blue-900 hover:bg-white hover:drop-shadow-lg shadow cursor-pointer text-xl"
+          <button
+            className="px-6 py-2 rounded-full bg-blue-900 text-white hover:text-blue-900 hover:bg-white"
             onClick={handleGetStarted}
           >
             Get Started
-          </Button>
+          </button>
         </div>
         <div>
           <img
