@@ -14,7 +14,7 @@ const Login = () => {
     setError(null);
     console.log(data);
     try {
-      const res = await fetch("http://192.168.137.39:8000/login/", {
+      const res = await fetch("http://192.168.137.9:8000/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(data),

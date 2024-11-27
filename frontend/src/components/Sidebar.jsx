@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { Button } from "react-bootstrap";
+// import { button } from "react-bootstrap";
 import { FaUser } from "react-icons/fa"; // Font Awesome icon for the user icon
 import { useNavigate } from "react-router-dom";
 
@@ -33,49 +33,49 @@ const Sidebar = () => {
           </div>
           <ul className="mt-12 w-3/4 flex flex-col gap-4  ">
             <li className=" text-start">
-              <Button
-                className="w-full text-blue-50 bg-blue-900 hover:text-blue-900 hover:bg-blue-50 py-2 px-4 rounded-md transition  text-start"
+              <button
+                className={`w-full py-2 px-4 border rounded-md text-start ${location.pathname === '/subjects' ? 'bg-blue-900 text-blue-50' : ' bg-white text-blue-900'}`}
                 onClick={() => {
                   navigate("/subjects");
                 }}
               >
                 Subjects
-              </Button>
+              </button>
             </li>
             <li>
-              <Button
-                className="w-full text-blue-900 bg-white hover:text-blue-900 hover:bg-blue-50 py-2 px-4 rounded-md transition  text-start"
+              <button
+                className={`w-full py-2 px-4 border rounded-md text-start ${location.pathname === '/dashboard' ? 'bg-blue-900 text-blue-50' : ' bg-white text-blue-900'}`}
                 onClick={() => {
                   navigate("/dashboard");
                 }}
               >
                 Dashboard
-              </Button>
+              </button>
             </li>
             <li>
-              <Button
-                className="w-full text-blue-900 bg-white hover:text-blue-900 hover:bg-blue-50 py-2 px-4 rounded-md transition  text-start"
+              <button
+                className={`w-full py-2 px-4 border rounded-md text-start ${location.pathname === '/notes' ? 'bg-blue-900 text-blue-50' : ' bg-white text-blue-900'}`}
                 onClick={() => {
                   navigate("/notes");
                 }}
               >
                 Notes
-              </Button>
+              </button>
             </li>
             <li>
-              <Button
-                className="w-full text-blue-900 bg-white hover:text-blue-900 hover:bg-blue-50 py-2 px-4 rounded-md transition  text-start"
+              <button
+                className={`w-full py-2 px-4 border rounded-md text-start ${location.pathname === '/flashcards' ? 'bg-blue-900 text-blue-50' : ' bg-white text-blue-900'}`}
                 onClick={() => {
                   navigate("/flashcards");
                 }}
               >
                 FlashCards
-              </Button>
+              </button>
             </li>
           </ul>
-          <Button className="mt-auto w-3/4 text-blue-900 bg-white hover:text-blue-900 hover:bg-blue-50 rounded-md py-2 px-4 transition  text-start  ">
+          <button className="mt-auto w-3/4 text-blue-900 bg-white hover:text-blue-900 hover:bg-blue-50 rounded-md py-2 px-4 transition  text-start  ">
             Generate
-          </Button>
+          </button>
         </div>
       </div>
     );
