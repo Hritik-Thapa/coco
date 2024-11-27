@@ -41,7 +41,7 @@ const Login = () => {
     }
 
     return (
-        <div className='bg-sky-50 h-[100vh] flex justify-center items-center'>
+        <div className='bg-sky-50 h-[100vh] w-[100vw] flex justify-center items-center'>
             <div className='w-[50%] h-[70%] p-10 border gap-12 flex-col flex items-center justify-center rounded-3xl m-20 shadow relative'>
                 <h1 className='text-xl absolute top-20 '>COCO</h1>
                 <h1 className='text-center text-5xl font-bold'>Login</h1>
