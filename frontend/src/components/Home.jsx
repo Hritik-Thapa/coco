@@ -8,7 +8,7 @@ export const Home = () => {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    navigate("/inbox");
+    navigate("/login");
   };
 
   return (
