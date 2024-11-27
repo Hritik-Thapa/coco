@@ -1,14 +1,14 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 import illustration from "../images/study illsutration.png";
 import pattern from "../images/pattern-02.png";
 import { useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 export const Home = () => {
   const navigate = useNavigate();
 
   const handleGetStarted = () => {
-    navigate("/inbox");
+    navigate("/login");
   };
 
   return (
@@ -24,9 +24,9 @@ export const Home = () => {
             Turn Your Notes into Knowledge <br />
             Smarter, Faster, Better.
           </p>
+
           <Button
-            variant="primary"
-            className="px-8 py-3 rounded-full hover:text-blue-900 hover:bg-white hover:drop-shadow-lg shadow cursor-pointer text-xl"
+            className=" text-blue-50 bg-blue-900 hover:text-blue-900 hover:bg-blue-50 py-2 px-4 rounded-full transition  text-start"
             onClick={handleGetStarted}
           >
             Get Started
