@@ -3,11 +3,6 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     extend: {
-      backgroundImage: {
-        "custom-pattern": "url('./src/images/pattern-01.png')", // Single image
-        "gradient-radial": "radial-gradient(circle, #1E40AF, #1E3A8A)", // Gradient example
-        "hero-pattern": "url('https://example.com/hero-pattern.svg')",
-      },
       colors: {
         neelo: {
           50: "#e3f2fd",
@@ -23,7 +18,6 @@ export default {
         },
       },
     },
-    extend: {},
   },
   plugins: [],
 };
