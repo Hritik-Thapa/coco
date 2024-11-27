@@ -7,12 +7,14 @@ const Sidebar = () => {
   const navigate = useNavigate();
   return (
     <div className="  w-[20%]  h-screen flex bg-blue-50 z-10">
-      <div className="w-[100%] h-full bg-blue-50 flex flex-col items-center py-6  text-start">
-        <div className="h-[15vh] flex items-center  text-start">
-          <h1 className="text-3xl font-bold text-blue-900 mb-6">COCO</h1>
-          <hr className="w-[50%] h-1 border-blue-900 mx-4 "></hr>
+      <div className="w-[100%] h-full bg-blue-50 flex flex-col items-center py-6  ">
+        <div className="h-[10vh] flex items-center justify-center">
+          <div className="text-center mt-4">
+            <h1 className="text-5xl font-bold text-blue-900 m-6">COCO</h1>
+            <hr className="w-[100%] h-1 border-blue-900 mx-auto" />
+          </div>
         </div>
-        <ul className="mt-8 w-3/4 flex flex-col gap-4  text-start">
+        <ul className="mt-12 w-3/4 flex flex-col gap-4  ">
           <li className=" text-start">
             <Button
               className="w-full text-blue-50 bg-blue-900 hover:text-blue-900 hover:bg-blue-50 py-2 px-4 rounded-md transition  text-start"
@@ -54,7 +56,7 @@ const Sidebar = () => {
             </Button>
           </li>
         </ul>
-        <Button className="mt-auto w-3/4 text-blue-900 bg-white hover:text-blue-900 hover:bg-blue-50 rounded-md py-2 px-4 transition  text-start">
+        <Button className="mt-auto w-3/4 text-blue-900 bg-white hover:text-blue-900 hover:bg-blue-50 rounded-md py-2 px-4 transition  text-start  ">
           Generate
         </Button>
       </div>
