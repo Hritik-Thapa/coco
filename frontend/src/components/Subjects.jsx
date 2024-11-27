@@ -3,7 +3,8 @@ import { FaUser } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 
 const Subjects = () => {
-  const navigate = useNavigate();
+  const handleAddChapter = () => {};
+
   return (
     <div className="w-[80%] h-screen ">
       <div className="flex-col flex items-center justify-center">
@@ -17,10 +18,8 @@ const Subjects = () => {
       </div>
 
       <div
-        className="m-8 flex justify-start"
-        onClick={() => {
-          navigate("/chapters");
-        }}
+        className="m-8 flex justify-start cursor-pointer"
+        onClick={handleAddChapter}
       >
         <div className="w-52 h-52 flex items-center justify-center bg-blue-100 rounded-lg shadow-md hover:shadow-lg">
           <div className="text-blue-900 text-4xl ">
