@@ -25,7 +25,7 @@ export const Home = () => {
             Smarter, Faster, Better.
           </p>
           <button
-            className="px-6 py-2 rounded-full bg-blue-900 text-white hover:text-blue-900 hover:bg-white"
+            className="px-6 py-2 rounded-full bg-blue-900 text-white hover:text-blue-900 hover:bg-white transition-colors duration-200"
             onClick={handleGetStarted}
           >
             Get Started

@@ -27,7 +27,14 @@ const Sidebar = () => {
         <div className="w-[100%] h-full bg-blue-50 flex flex-col items-center py-6  ">
           <div className="h-[10vh] flex items-center justify-center">
             <div className="text-center mt-4">
-              <h1 className="text-5xl font-bold text-blue-900 m-6">COCO</h1>
+              <h1
+                className="text-5xl font-bold text-blue-900 m-6 cursor-pointer"
+                onClick={() => {
+                  navigate("/");
+                }}
+              >
+                COCO
+              </h1>
               <hr className="w-[100%] h-1 border-blue-900 mx-auto" />
             </div>
           </div>

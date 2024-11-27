@@ -21,7 +21,9 @@ const Login = () => {
       });
       const responseData = await res.json();
       console.log(responseData);
-      if (responseData.success === false) {
+      console.log(responseData);
+      console.log(responseData.status);
+      if (responseData.status === false) {
         setError(responseData.message);
         setTimeout(() => {
           setError(null);
@@ -29,7 +31,7 @@ const Login = () => {
       } else {
         setLoading(false);
         setError(null);
-        console.log(responseData);
+
         navigate("/subjects");
       }
     } catch (err) {
