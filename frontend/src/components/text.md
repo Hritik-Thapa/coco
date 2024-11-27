@@ -1,7 +1,8 @@
  <div className="flex-1 flex flex-col p-6">
         {/* Header */}
         <div className="flex items-center mb-4">
-          <div className="p-4 bg-blue-100 rounded-full">
+   
+      </div>       <div className="p-4 bg-blue-100 rounded-full">
             <FaUser className="text-blue-900 text-2xl" />
           </div>
           <h1 className="text-blue-900 text-3xl font-bold ml-4">Subject</h1>
@@ -14,4 +15,3 @@
             <div className="text-blue-900 text-4xl font-bold">+</div>
           </div>
         </div>
-      </div>
