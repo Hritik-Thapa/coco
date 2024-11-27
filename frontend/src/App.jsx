@@ -6,18 +6,24 @@ import Sidebar from "./components/Sidebar.jsx";
 import Forms from "./Forms.jsx";
 import Login from "./components/Login.jsx";
 import Subjects from "./components/Subjects.jsx";
+import Dashboard from "./components/Dashboard.jsx";
+import Notes from "./components/Notes.jsx";
+import FlashCards from "./components/FlashCards.jsx";
 
 const App = () => {
   return (
     <div className="flex">
-      <Sidebar />
       <Router>
+        <Sidebar />
         <Routes>
           <Route path="/" element={<Home />} />
           {/* <Route path="/sidebar" element={<Sidebar />} /> */}
           <Route path="/form" element={<Forms />} />
           <Route path="/subjects" element={<Subjects />} />
           <Route path="/login" element={<Login />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/notes" element={<Notes />} />
+          <Route path="/flashcards" element={<FlashCards />} />
         </Routes>
       </Router>
     </div>
