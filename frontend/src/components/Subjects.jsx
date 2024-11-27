@@ -16,15 +16,15 @@ const Subjects = () => {
         <hr className="border-blue-900 w-[95%] " />
       </div>
 
-      <div className="m-8 flex justify-start">
+      <div
+        className="m-8 flex justify-start"
+        onClick={() => {
+          navigate("/chapters");
+        }}
+      >
         <div className="w-52 h-52 flex items-center justify-center bg-blue-100 rounded-lg shadow-md hover:shadow-lg">
           <div className="text-blue-900 text-4xl ">
-            <div
-              className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center"
-              onClick={() => {
-                navigate("/chapters");
-              }}
-            >
+            <div className="w-20 h-20 bg-blue-50 rounded-full flex items-center justify-center">
               +
             </div>
           </div>

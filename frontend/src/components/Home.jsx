@@ -1,8 +1,8 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 import illustration from "../images/study illsutration.png";
 import pattern from "../images/pattern-02.png";
 import { useNavigate } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 export const Home = () => {
   const navigate = useNavigate();
@@ -24,12 +24,13 @@ export const Home = () => {
             Turn Your Notes into Knowledge <br />
             Smarter, Faster, Better.
           </p>
-          <button
-            className="px-6 py-2 rounded-full bg-blue-900 text-white hover:text-blue-900 hover:bg-white transition-colors duration-200"
+
+          <Button
+            className=" text-blue-50 bg-blue-900 hover:text-blue-900 hover:bg-blue-50 py-2 px-4 rounded-full transition  text-start"
             onClick={handleGetStarted}
           >
             Get Started
-          </button>
+          </Button>
         </div>
         <div>
           <img

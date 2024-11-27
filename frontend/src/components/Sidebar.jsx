@@ -40,49 +40,59 @@ const Sidebar = () => {
           </div>
           <ul className="mt-12 w-3/4 flex flex-col gap-4  ">
             <li className=" text-start">
-              <Button
-                className="w-full text-blue-50 bg-blue-900 hover:text-blue-900 hover:bg-blue-50 py-2 px-4 rounded-md transition  text-start"
+              <button
+                className="w-full text-blue-900 bg-white  py-2 px-4 rounded-md transition  text-start"
                 onClick={() => {
                   navigate("/subjects");
                 }}
               >
                 Subjects
-              </Button>
+              </button>
             </li>
             <li>
-              <Button
-                className="w-full text-blue-900 bg-white hover:text-blue-900 hover:bg-blue-50 py-2 px-4 rounded-md transition  text-start"
+              <button
+                className="w-full text-blue-900 bg-white   py-2 px-4 rounded-md   text-start"
                 onClick={() => {
                   navigate("/dashboard");
                 }}
               >
                 Dashboard
-              </Button>
+              </button>
             </li>
             <li>
-              <Button
-                className="w-full text-blue-900 bg-white hover:text-blue-900 hover:bg-blue-50 py-2 px-4 rounded-md transition  text-start"
+              <button
+                className="w-full text-blue-900 bg-white  py-2 px-4 rounded-md transition  text-start"
                 onClick={() => {
                   navigate("/notes");
                 }}
               >
                 Notes
-              </Button>
+              </button>
             </li>
             <li>
-              <Button
-                className="w-full text-blue-900 bg-white hover:text-blue-900 hover:bg-blue-50 py-2 px-4 rounded-md transition  text-start"
+              <button
+                className="w-full text-blue-900 bg-white  py-2 px-4 rounded-md transition  text-start"
                 onClick={() => {
                   navigate("/flashcards");
                 }}
               >
                 FlashCards
-              </Button>
+              </button>
+            </li>
+            <li>
+              <button
+                className="w-full text-blue-900 bg-white  py-2 px-4 rounded-md transition  text-start"
+                onClick={() => {
+                  navigate("/quiz");
+                }}
+              >
+                Quiz
+              </button>
             </li>
           </ul>
-          <Button className="mt-auto w-3/4 text-blue-900 bg-white hover:text-blue-900 hover:bg-blue-50 rounded-md py-2 px-4 transition  text-start  ">
+          <button className="mt-auto w-3/4 text-blue-900 bg-white  rounded-md py-2 px-4 transition  text-start  ">
             Generate
-          </Button>
+          </button>
         </div>
       </div>
     );

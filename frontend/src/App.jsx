@@ -10,6 +10,7 @@ import Dashboard from "./components/Dashboard.jsx";
 import Notes from "./components/Notes.jsx";
 import FlashCards from "./components/FlashCards.jsx";
 import Chapters from "./components/Chapters.jsx";
+import Quiz from "./components/Quiz.jsx";
 
 const App = () => {
   return (
@@ -26,6 +27,7 @@ const App = () => {
           <Route path="/notes" element={<Notes />} />
           <Route path="/flashcards" element={<FlashCards />} />
           <Route path="/chapters" element={<Chapters />} />
+          <Route path="/quiz" element={<Quiz />} />
         </Routes>
       </Router>
     </div>
