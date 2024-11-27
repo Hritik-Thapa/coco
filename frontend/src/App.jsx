@@ -9,6 +9,7 @@ import Subjects from "./components/Subjects.jsx";
 import Dashboard from "./components/Dashboard.jsx";
 import Notes from "./components/Notes.jsx";
 import FlashCards from "./components/FlashCards.jsx";
+import Chapters from "./components/Chapters.jsx";
 
 const App = () => {
   return (
@@ -24,6 +25,7 @@ const App = () => {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/notes" element={<Notes />} />
           <Route path="/flashcards" element={<FlashCards />} />
+          <Route path="/chapters" element={<Chapters />} />
         </Routes>
       </Router>
     </div>
